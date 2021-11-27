@@ -17,7 +17,7 @@ public class CharactersAnalysis {
         Scanner introducesCharacters = new Scanner(System.in);
         int numberOfCharactersInPassword = 12;
 
-        System.out.print("* * * Enter characters symbol by symbool * * *");
+        System.out.print("* * * Enter characters symbol by symbol * * *");
         System.out.print("\n* * * Password should consists of at least " + numberOfCharactersInPassword + " characters * * *");
 
         for (int i = 1; i <= numberOfCharactersInPassword; i++) {
@@ -65,27 +65,23 @@ public class CharactersAnalysis {
 
             if (Character.isLowerCase(c)){
 
-                setFieldThatCollectsSmallCharacters(fieldThatCollectsSmallCharacters.concat(checkedCharacter));
+                return setFieldThatCollectsSmallCharacters(fieldThatCollectsSmallCharacters.concat(checkedCharacter));
 
-                return "";
             }
             if (Character.isUpperCase(c)){
 
-                setFieldThatCollectsCapitalCharacters(fieldThatCollectsCapitalCharacters.concat(checkedCharacter));
+                return setFieldThatCollectsCapitalCharacters(fieldThatCollectsCapitalCharacters.concat(checkedCharacter));
 
-                return "";
             }
             if (Character.isDigit(c)){
 
-                setFieldThatCollectsDigits(fieldThatCollectsDigits.concat(checkedCharacter));
+                return setFieldThatCollectsDigits(fieldThatCollectsDigits.concat(checkedCharacter));
 
-                return "";
             }
             if (!Character.isAlphabetic(c)){
 
-                setFieldThatCollectsSpecialSigns(fieldThatCollectsSpecialSigns.concat(checkedCharacter));
+                return setFieldThatCollectsSpecialSigns(fieldThatCollectsSpecialSigns.concat(checkedCharacter));
 
-                return "";
             }
 
         }
@@ -107,32 +103,36 @@ public class CharactersAnalysis {
         return fieldThatCollectsCapitalCharacters;
     }
 
-    public static void setFieldThatCollectsCapitalCharacters(String fieldThatCollectsCapitalCharacters) {
+    public static String setFieldThatCollectsCapitalCharacters(String fieldThatCollectsCapitalCharacters) {
         CharactersAnalysis.fieldThatCollectsCapitalCharacters = fieldThatCollectsCapitalCharacters;
+        return fieldThatCollectsCapitalCharacters;
     }
 
     public static String getFieldThatCollectsSpecialSigns() {
         return fieldThatCollectsSpecialSigns;
     }
 
-    public static void setFieldThatCollectsSpecialSigns(String fieldThatCollectsSpecialSigns) {
+    public static String setFieldThatCollectsSpecialSigns(String fieldThatCollectsSpecialSigns) {
         CharactersAnalysis.fieldThatCollectsSpecialSigns = fieldThatCollectsSpecialSigns;
+        return fieldThatCollectsSpecialSigns;
     }
 
     public static String getFieldThatCollectsDigits() {
         return fieldThatCollectsDigits;
     }
 
-    public static void setFieldThatCollectsDigits(String fieldThatCollectsDigits) {
+    public static String setFieldThatCollectsDigits(String fieldThatCollectsDigits) {
         CharactersAnalysis.fieldThatCollectsDigits = fieldThatCollectsDigits;
+        return fieldThatCollectsDigits;
     }
 
     public static String getFieldThatCollectsSmallCharacters() {
         return fieldThatCollectsSmallCharacters;
     }
 
-    public static void setFieldThatCollectsSmallCharacters(String fieldThatCollectsSmallCharacters) {
+    public static String setFieldThatCollectsSmallCharacters(String fieldThatCollectsSmallCharacters) {
         CharactersAnalysis.fieldThatCollectsSmallCharacters = fieldThatCollectsSmallCharacters;
+        return fieldThatCollectsSmallCharacters;
     }
 
     public static String getFieldThatCollectsAllCharacters() {
