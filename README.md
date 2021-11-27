@@ -9,7 +9,9 @@ After entering any 1 symbol press enter button then compilation will take place.
 
 Technologies used in the project are:
 IDE - IntelliJ Idea Community; 
-Java - 1.8
+Java - 1.8;
+Maven; 
+TDD.
 
 Contact data:
 
