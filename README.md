@@ -15,6 +15,8 @@ TDD.
 
 Contact data:
 
+Author: Przemyslaw Karcz - Junior Java Developer
+
 E-mail: przemyslawkarcz@gmail.com
 
-Author: Przemyslaw Karcz - Junior Java Developer
+
