@@ -1,7 +1,5 @@
 package Password_Strength_Symbol_By_Symbol;
 
-import static Password_Strength_Symbol_By_Symbol.CharactersAnalysis.executiveMethod;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -16,7 +14,8 @@ public class Main {
         //                              or more than 2 special characters.
 
         // Main method responsible for checking password strength throughout symbol by symbol
-        executiveMethod();
+        CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+        charactersAnalysis.executiveMethod();
 
     }
 

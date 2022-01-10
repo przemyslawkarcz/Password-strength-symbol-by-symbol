@@ -2,17 +2,17 @@ package Password_Strength_Symbol_By_Symbol;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static Password_Strength_Symbol_By_Symbol.CharactersAnalysis.checksCharacterType;
-import static Password_Strength_Symbol_By_Symbol.CharactersAnalysis.checksLengthOfCharacter;
 
 public class CharacterAnalysisTest {
 
    @Test
    public void checksLengthOfCharacterTestReturnValue01(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "a";
 
-      String character = checksLengthOfCharacter(s);
+      String character = charactersAnalysis.checksLengthOfCharacter(s);
 
       Assertions.assertEquals("a", character);
 
@@ -21,9 +21,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksLengthOfCharacterTestReturnValue02(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "a";
 
-      String character = checksLengthOfCharacter(s);
+      String character = charactersAnalysis.checksLengthOfCharacter(s);
 
       Assertions.assertNotEquals("b", character);
 
@@ -32,9 +34,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksLengthOfCharacterTestLength(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "a";
 
-      String character = checksLengthOfCharacter(s);
+      String character = charactersAnalysis.checksLengthOfCharacter(s);
 
       int length = character.length();
 
@@ -45,9 +49,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueCapitalLetter01(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "A";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertEquals("A", characterType);
 
@@ -56,9 +62,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueCapitalLetter02(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "A";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertNotEquals("B", characterType);
 
@@ -67,9 +75,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueDigit01(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "1";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertEquals("1", characterType);
 
@@ -78,9 +88,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueDigit02(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "1";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertNotEquals("2", characterType);
 
@@ -89,9 +101,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueAlphabetic01(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "#";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertEquals("#", characterType);
 
@@ -100,9 +114,11 @@ public class CharacterAnalysisTest {
    @Test
    public void checksCharacterTypeTestReturnValueAlphabetic02(){
 
+      CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
       String s = "#";
 
-      String characterType = checksCharacterType(s);
+      String characterType = charactersAnalysis.checksCharacterType(s);
 
       Assertions.assertNotEquals("@", characterType);
 

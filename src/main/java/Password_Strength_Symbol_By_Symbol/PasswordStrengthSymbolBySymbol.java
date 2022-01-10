@@ -4,7 +4,7 @@ import static Password_Strength_Symbol_By_Symbol.CharactersAnalysis.*;
 
 public class PasswordStrengthSymbolBySymbol {
 
-    public static void checksPasswordStrengthSymbolBySymbol(){
+    public void checksPasswordStrengthSymbolBySymbol(){
 
         Integer passwordLength = getFieldThatCollectsAllCharacters().length();
 

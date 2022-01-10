@@ -2,8 +2,6 @@ package Password_Strength_Symbol_By_Symbol;
 
 import java.util.Scanner;
 
-import static Password_Strength_Symbol_By_Symbol.PasswordStrengthSymbolBySymbol.checksPasswordStrengthSymbolBySymbol;
-
 public class CharactersAnalysis {
 
     public static String fieldThatCollectsCapitalCharacters = "";
@@ -12,7 +10,9 @@ public class CharactersAnalysis {
     public static String fieldThatCollectsDigits = "";
     public static String fieldThatCollectsAllCharacters = "";
 
-    public static void executiveMethod() {
+    public void executiveMethod() {
+
+        PasswordStrengthSymbolBySymbol passwordStrengthSymbolBySymbol = new PasswordStrengthSymbolBySymbol();
 
         Scanner introducesCharacters = new Scanner(System.in);
         int numberOfCharactersInPassword = 12;
@@ -33,7 +33,7 @@ public class CharactersAnalysis {
 
             checksCharacterType(enteredCharacter);
 
-            checksPasswordStrengthSymbolBySymbol();
+            passwordStrengthSymbolBySymbol.checksPasswordStrengthSymbolBySymbol();
 
             printsSummaryOfCharacters();
 
@@ -41,7 +41,7 @@ public class CharactersAnalysis {
 
     }
 
-    public static String checksLengthOfCharacter(String someString){
+    public String checksLengthOfCharacter(String someString){
 
         int characterLength = someString.length();
 
@@ -53,9 +53,11 @@ public class CharactersAnalysis {
         return someString;
     }
 
-    public static String checksCharacterType(String someString){
+    public String checksCharacterType(String someString){
 
-        String checkedCharacter = checksLengthOfCharacter(someString);
+        CharactersAnalysis charactersAnalysis = new CharactersAnalysis();
+
+        String checkedCharacter = charactersAnalysis.checksLengthOfCharacter(someString);
 
         for (int i = 0; i < checkedCharacter.length(); i++) {
 
@@ -89,7 +91,7 @@ public class CharactersAnalysis {
         return checkedCharacter;
     }
 
-    public static void printsSummaryOfCharacters() {
+    public void printsSummaryOfCharacters() {
 
         System.out.println("Password: \t" + getFieldThatCollectsAllCharacters());
         System.out.println("Uppercase: \t" + getFieldThatCollectsCapitalCharacters() + "\t, number of characters: " + getFieldThatCollectsCapitalCharacters().length());
